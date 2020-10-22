@@ -1,0 +1,72 @@
+{
+  "name": "Electron Html Template builder",
+  "productName": "Electron Html Template builder",
+  "version": "1.0.0",
+  "description": "Quick and dirty application to have everything packed",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "build:package": "electron-packager . --out=out",
+    "buildsnap": "electron-installer-snap --src=out/myappname-linux-x64",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
+  },
+  "keywords": [],
+  "author": {
+    "name": "Amir Hossein Roohi",
+    "email": "ahroohi1379@hotmail.com"
+  },
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "ElectronHtmlTemplatebuilder"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-snap",
+          "config": {
+            "features": {
+              "audio": true,
+              "mpris": "com.r00terAF18.electrontemplatebuilder",
+              "webgl": true
+            },
+            "summary": "Pretty Awesome"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.54",
+    "@electron-forge/maker-deb": "^6.0.0-beta.54",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+    "@electron-forge/maker-zip": "^6.0.0-beta.54",
+    "electron": "10.1.4",
+    "electron-installer-snap": "^5.1.0"
+  }
+}
