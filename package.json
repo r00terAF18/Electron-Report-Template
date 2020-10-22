@@ -7,8 +7,6 @@
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
-    "build:package": "electron-packager . --out=out",
-    "buildsnap": "electron-installer-snap --src=out/myappname-linux-x64",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
     "lint": "echo \"No linting configured\""
