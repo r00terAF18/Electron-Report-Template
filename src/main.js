@@ -5,22 +5,17 @@ const editor = grapesjs.init({
     // As an alternative we could use: `components: '<h1>Hello World Component!</h1>'`,
     fromElement: true,
     // Size of the editor
-    height: '900px',
+    height: '980px',
     width: 'auto',
     // Disable the storage manager for the moment
     storageManager: false,
     plugins: ['gjs-preset-webpage', 'grapesjs-blocks-bootstrap4'],
     pluginsOpts: {
-        'gjs-preset-webpage': {
-            // options
-        },
-        'grapesjs-blocks-bootstrap4': {
 
-        },
     },
     canvas: {
         styles: [
-            'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css'
+            'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css',
         ],
         scripts: [
             'https://code.jquery.com/jquery-3.3.1.slim.min.js',
@@ -29,3 +24,12 @@ const editor = grapesjs.init({
         ],
     }
 });
+
+// const btnSave = document.getElementById('btnSave');
+// const frame = document.querySelector('#document');
+// btnSave.onclick = saveFile;
+
+// function saveFile(){
+//     console.log(frame.innerHTML());
+// }
+
