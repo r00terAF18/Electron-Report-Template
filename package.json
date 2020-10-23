@@ -2,7 +2,7 @@
   "name": "Electron Html Template builder",
   "productName": "Electron Html Template builder",
   "version": "1.0.0",
-  "description": "Quick and dirty application to have everything packed",
+  "description": "Quick and dirty application to create templates using GrapsJS",
   "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
